@@ -1,0 +1,125 @@
+:root {
+    --bg: #f0f0f0;
+    --text: #222;
+    --container-bg: white;
+    --bar-bg: #ccc;
+  }
+  
+  body.dark {
+    --bg: #1e1e1e;
+    --text: #fff;
+    --container-bg: #2e2e2e;
+    --bar-bg: #444;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    transition: 0.4s ease;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: var(--container-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  .skill-input {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .skill-input input {
+    flex: 1;
+  }
+  
+  button {
+    background-color: #1abc9c;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .result-section {
+    margin-top: 30px;
+  }
+  
+  .skill-bar {
+    background: var(--bar-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+  
+  .skill-bar-fill {
+    height: 30px;
+    color: white;
+    text-align: left;
+    line-height: 30px;
+    transition: width 1s ease;
+    padding-left: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  
+  .toggle-container {
+    text-align: right;
+    padding: 10px 20px;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+  }
+  
+  .switch input {display:none;}
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 25px;
+    top: 0; left: 0; right: 0; bottom: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2.5px; left: 4px;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(24px);
+  }

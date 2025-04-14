@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skill Meter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="themeToggle">
+      <span class="slider"></span>
+    </label>
+    <span>🌙 Toggle Dark Mode</span>
+  </div>
+
+  <div class="container">
+    <h1>Skill Meter – Self Evaluation Tool</h1>
+    <form id="skillForm">
+      <input type="text" placeholder="Your Name" id="username" required />
+
+      <div id="skills-container">
+        <div class="skill-input">
+          <input type="text" placeholder="Skill Name" required class="skill-name" />
+          <input type="number" placeholder="Rating (1-10)" min="1" max="10" required class="skill-value" />
+        </div>
+      </div>
+
+      <button type="button" id="addSkill">+ Add Skill</button>
+      <button type="submit">Show My Skill Meter</button>
+    </form>
+
+    <div id="result" class="result-section"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
